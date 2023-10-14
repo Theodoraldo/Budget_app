@@ -7,10 +7,16 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+      <header><%= render partial: 'layouts/header' %></header>
+      <div class="is-flex is-justify-content-center">
+        <span class="subtitle has-text-success-dark"><%= notice %></span>
+        <span class="subtitle has-text-danger-dark"><%= alert %></span>
+      </div>
     <%= yield %>
   </body>
 </html>
