@@ -5,9 +5,9 @@ class GroupsController < ApplicationController
 
   def index
     @group_data = Group
-      .select("groups.name, groups.icon, groups.created_at, SUM(entities.amount) AS total_amount")
+      .select('groups.name, groups.icon, groups.created_at, SUM(entities.amount) AS total_amount')
       .left_joins(:entities)
-      .group("groups.id")
+      .group('groups.id')
   end
 
   def create
