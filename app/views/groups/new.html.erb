@@ -1,6 +1,8 @@
 <h1 class="is-size-4 mb-3 has-text-grey is-flex is-justify-content-center has-text-weight-bold">Add Category</h1>
 
 <div class="container" style="width: 90%;">
+  <%= link_to "<", groups_path, class: "button has-background-link has-text-white p-3 is-rounded mb-3" %>
+
   <%= form_with scope: :group, url: groups_path do |form| %>
     <div class="mb-3">
       <%= form.label :name %>
@@ -8,7 +10,7 @@
     </div>
 
      <div class="mb-3">
-      <%= form.label :icon %>
+      <%= form.label :icon, "icon url" %>
       <%= form.text_field :icon , class: "input" %>
     </div>
 
