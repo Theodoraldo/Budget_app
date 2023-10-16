@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ html,
+ body {
+  background-color: rgb(242,243,238);
+  width: 100%;
+  height: 100%;
+ }
+
+ .radius-all {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-start {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbar-start {
+    flex-direction: row;
+  }
+}
+
+ 
