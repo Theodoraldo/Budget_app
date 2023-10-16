@@ -1,7 +1,24 @@
 <h1 class="is-size-4 mb-3 has-text-grey is-flex is-justify-content-center has-text-weight-bold">Category List</h1>
 
-<div class="container is-flex is-justify-content-center" style="width: 90%;">
+<div class="container" style="width: 90%;">
   <div class=" container is-flex is-justify-content-end mb-4">
     <%= link_to "New Category", new_group_path, class: "button is-small is-info has-text-weight-bold" %>
   </div>
+
+  <% @group_data.each do |data| %>   
+    <div class=" is-flex is-justify-content-space-between is-align-items-center mt-4 mb-4 column has-background-white radius-all">
+      <figure class="image is-64x64">
+        <img src="<%= data.icon %>" alt="Category photo">
+      </figure>
+
+      <div>
+        <p class="is-4 has-text-grey"> <%= data.name %></p>
+        <p class="is-4 has-text-grey"> <%= data.created_at.strftime('%d %B %Y') %></p>
+      </div>
+
+      <div>
+        <p><%= data.total_amount.present? ? number_to_currency(data.total_amount, precision: 2) : '$0.00' %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
