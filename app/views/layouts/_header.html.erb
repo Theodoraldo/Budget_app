@@ -1,18 +1,19 @@
 <% if current_user %>
   <nav class="navbar has-background-link p-3" role="navigation" aria-label="main navigation">
-    <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger has-text-white" id="nav-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
 
-    <div class="navbar-menu">
+    <div class="navbar-menu has-background-link" id="nav-links">
       <div class="navbar-start">
-          <h1 class="mr-6"><strong class="has-text-white">Welcome <%= current_user.name %></strong></h1>
-          <%= link_to "Food", '#', class: "has-text-white px-2" %>
-          <%= link_to "Recipe", '#', class: "has-text-white px-2" %>  
-          <%= link_to "Public Recipe", '#', class: "has-text-white px-2" %>
-          <%= link_to "Sign Out", destroy_user_session_path(@post), method: :delete, data: { "turbo-method": :delete }, class: "button is-small is-info has-text-weight-bold mx-2" %>
+        <h1 class="has-text-white mr-5 mx-3 has-text-weight-bold is-size-6">Welcome <%= current_user.name %></h1>
+        <%= link_to "Category", groups_path, class: "has-text-white mx-3" %>
+        <%= link_to "Transactions", '#', class: "has-text-white mx-3" %>
+        <%= link_to "Most recent", '#', class: "has-text-white mx-3" %>
+        <%= link_to "Most ancient", '#', class: "has-text-white mx-3" %>
+        <%= link_to "Sign Out", destroy_user_session_path(@post), method: :delete, data: { "turbo-method": :delete }, class: "button is-small is-info has-text-weight-bold mx-3" %>
       </div>
     </div>
   </nav>
