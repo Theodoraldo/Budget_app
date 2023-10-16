@@ -3,6 +3,13 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
+  def index
+    @group_data = Group
+      .select("groups.name, groups.icon, groups.created_at, SUM(entities.amount) AS total_amount")
+      .left_joins(:entities)
+      .group("groups.id")
+  end
+
   def create
     @group = current_user.groups.new(group_params)
 
