@@ -17,6 +17,7 @@ class EntitiesController < ApplicationController
   end
 
   def show
+    @group = Group.find(params[:id])
     @entity = current_user.entities.where(group_id: params[:id])
   end
 
