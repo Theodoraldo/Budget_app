@@ -1,0 +1,14 @@
+<h1 class="is-size-4 mb-3 has-text-grey is-flex is-justify-content-center has-text-weight-bold">Transaction Details</h1>
+
+<div class="container" style="width: 90%;">
+  <% if @entity.present? %>
+    <% @entity.each do |entity| %> 
+      <div class="is-flex is-justify-content-space-between has-background-white m-4 p-4">
+        <p class="has-text-weight-bold has-text-grey"><%= entity.name %></p>
+        <p class="has-text-grey"><%= number_to_currency(entity.amount, precision: 2) %></p>
+      </div>
+    <% end %>
+  <% else %>
+    <p><%= current_user.name %>, you have not made any transaction for this Category</p>
+  <% end %>
+</div>
