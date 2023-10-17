@@ -1,7 +1,7 @@
 <h1 class="is-size-4 mb-3 has-text-grey is-flex is-justify-content-center has-text-weight-bold">Transaction Details</h1>
 
 <div class="container" style="width: 90%;">
-<p class="is-size-5 is-italic is-flex is-justify-content-center my-3 has-text-weight-bold has-text-grey"><%= @group.name %></p>
+<p class="is-size-5 is-italic has-text-centered my-3 has-text-weight-bold has-text-grey"><%= @group.name %></p>
   <% if @entity.present? %>
     <% @entity.each do |entity| %> 
       <div class="is-flex is-justify-content-space-between has-background-white m-4 p-4">
