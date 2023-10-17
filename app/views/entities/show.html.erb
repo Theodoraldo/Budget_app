@@ -2,14 +2,20 @@
 
 <div class="container" style="width: 90%;">
 <p class="is-size-5 is-italic has-text-centered my-3 has-text-weight-bold has-text-grey"><%= @group.name %></p>
+
   <% if @entity.present? %>
+
     <% @entity.each do |entity| %> 
-      <div class="is-flex is-justify-content-space-between has-background-white m-4 p-4">
-        <p class="has-text-weight-bold has-text-grey"><%= entity.name %></p>
-        <p class="has-text-grey"><%= number_to_currency(entity.amount, precision: 2) %></p>
+      <div class="box">
+        <div class="is-flex is-justify-content-space-between has-background-white m-4">
+          <p class="has-text-weight-bold has-text-grey"><%= entity.name %></p>
+          <p class="has-text-grey"><%= number_to_currency(entity.amount, precision: 2) %></p>
+        </div>
       </div>
     <% end %>
   <% else %>
     <p><%= current_user.name %>, you have not made any transaction for this Category</p>
+ 
   <% end %>
+
 </div>
