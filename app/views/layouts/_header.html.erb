@@ -13,7 +13,7 @@
       <div class="navbar-start is-flex is-justify-content-center is-align-items-center">
         <h1 class="has-text-white mr-5 mx-3 has-text-weight-bold is-size-6">Welcome <%= current_user.name %></h1>
         <%= link_to "Category", groups_path, class: "has-text-white m-2" %>
-        <%= link_to "Transactions", '#', class: "has-text-white m-2" %>
+        <%= link_to "New Transactions", new_entity_path, class: "has-text-white m-2" %>
         <%= link_to "Most recent", '#', class: "has-text-white m-2" %>
         <%= link_to "Most ancient", '#', class: "has-text-white m-2" %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { "turbo-method": :delete }, class: "button is-small is-info has-text-weight-bold m-2" %>
