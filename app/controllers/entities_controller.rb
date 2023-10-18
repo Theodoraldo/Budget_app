@@ -18,7 +18,7 @@ class EntitiesController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @entity = current_user.entities.where(group_id: params[:id])
+    @entity = current_user.entities.where(group_id: params[:id]).order(created_at: :desc)
   end
 
   private
