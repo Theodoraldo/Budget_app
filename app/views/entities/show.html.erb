@@ -16,3 +16,5 @@
     <p><%= current_user.name %>, you have not made any transaction for this Category</p>
   <% end %>
 </div>
+
+<%= link_to "New Transaction", new_entity_path, class: "button is-success has-text-weight-bold p-5", id: "fix-btn" %>
