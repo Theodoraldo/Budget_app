@@ -80,7 +80,7 @@ This application is about building a mobile web application where you can manage
 
 ## 🚀 Walkthrough Demo <a name="live-demo"></a>
 
-- [Walkthrogh Demo Link](https://www.loom.com/share/4a49fbad89c746988d139f5ed4b3900b)
+- [Walkthrogh Demo Link](https://www.loom.com/share/57937b2642d94bf49067ca61a3fba8c2?sid=f3e33c05-7323-4027-b29f-f66b36c0f867)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
