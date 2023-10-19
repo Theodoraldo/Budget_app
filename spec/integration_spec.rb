@@ -1,15 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Index Page', type: :feature do
+  include Devise::Test::IntegrationHelpers
 
-include Devise::Test::IntegrationHelpers
+  before :each do
+    user = User.create(name: 'Theodoraldo', email: 'theodore@gmail.com', password: 'password123')
 
-before :each do
-  user = User.create(name: 'Theodoraldo', email: 'theodore@gmail.com', password: 'password123')
-
-  sign_in user
-  visit groups_path
-end
+    sign_in user
+    visit groups_path
+  end
 
   it 'see the title of the application ' do
     expect(page).to have_content('Budget App')
@@ -41,20 +40,19 @@ end
 end
 
 RSpec.describe 'Add Category Page', type: :feature do
-
   include Devise::Test::IntegrationHelpers
-  
+
   before :each do
     user = User.create(name: 'Theodoraldo', email: 'theodore@gmail.com', password: 'password123')
-  
+
     sign_in user
     visit new_group_path
   end
-  
+
   it 'see the title of the application ' do
     expect(page).to have_content('Budget App')
   end
-  
+
   it 'See add category' do
     expect(page).to have_content('Add Category')
   end
@@ -84,23 +82,23 @@ RSpec.describe 'Add Category Page', type: :feature do
     expect(page).to have_current_path(groups_path)
   end
 end
-  
-RSpec.describe 'Entities index and show Pages', type: :feature do
 
+RSpec.describe 'Entities index and show Pages', type: :feature do
   include Devise::Test::IntegrationHelpers
-  
+
   before :each do
     user = User.create(name: 'Theodoraldo', email: 'theodore@gmail.com', password: 'password123')
-    category = Group.create(name: 'Melcom', icon: 'q=tbn:ANd9GcQgGv4xkuVEornxwKLRdZGkC2XeGGOM2hDRlBqTl6B0jA&s', user_id: user)
-  
+    Group.create(name: 'Melcom', icon: 'q=tbn:ANd9GcQgGv4xkuVEornxwKLRdZGkC2XeGGOM2hDRlBqTl6B0jA&s',
+                 user_id: user)
+
     sign_in user
     visit new_entity_path
   end
-  
+
   it 'see the title of the application ' do
     expect(page).to have_content('Budget App')
   end
-  
+
   it 'See add category' do
     expect(page).to have_content('Add Transaction')
   end
