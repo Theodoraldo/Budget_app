@@ -72,7 +72,7 @@ This application is about building a mobile web application where you can manage
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://budget-ok43.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,7 +80,7 @@ This application is about building a mobile web application where you can manage
 
 ## 🚀 Walkthrough Demo <a name="live-demo"></a>
 
-- [Walkthrogh Demo Link]()
+- [Walkthrogh Demo Link](https://www.loom.com/share/4a49fbad89c746988d139f5ed4b3900b)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
