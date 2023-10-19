@@ -175,8 +175,8 @@ Feel free to check the [issues page](https://github.com/Theodoraldo/Budget_app/i
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-- We would like to thank Microverse and anyone who contributed to the success of this project. If we am to mention names, this readme cannot hold the list 😁😁.
+- I would like to acknowledge Gregoire Vella for such an awesome design and documentation.
+- Thanks to Microverse and anyone who contributed to the success of this project. If we am to mention names, this readme cannot hold the list 😁😁.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
