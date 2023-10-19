@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
   end
 
   describe 'associations' do
-    it 'should have many foods and recipes' do
+    it 'should have many groups and entities' do
       user = User.reflect_on_association(:groups)
       expect(user.macro).to eq(:has_many)
       user = User.reflect_on_association(:entities)
@@ -23,15 +23,25 @@ RSpec.describe Group, type: :model do
   describe 'creation' do
     before :all do
       @user = User.create(name: 'Test', email: 'test@gmail.com')
-      @Group = Group.create(name: 'Melcom', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGv4xkuVEornxwKLRdZGkC2XeGGOM2hDRlBqTl6B0jA&s', user_id: @user)
+      @group = Group.create(name: 'Melcom',
+                            icon: 'https://encrypted-tbn0.gstatic.com/images', user_id: @user)
     end
 
     it 'has a name' do
-      expect(@Group.name).to eq('Melcom')
+      expect(@group.name).to eq('Melcom')
     end
 
     it 'belongs to a user' do
-      expect(@Group.user_id).to eq(@user.id)
+      expect(@group.user_id).to eq(@user.id)
+    end
+  end
+
+  describe 'associations' do
+    it 'should have many entitiess and belong to user' do
+      ass1 = Group.reflect_on_association(:user)
+      expect(ass1.macro).to eq(:belongs_to)
+      ass2 = Group.reflect_on_association(:entities)
+      expect(ass2.macro).to eq(:has_many)
     end
   end
 end
@@ -40,7 +50,8 @@ RSpec.describe Entity, type: :model do
   describe 'creation' do
     before :all do
       @user = User.create(name: 'Test', email: 'test@gmail.com')
-      @group = Group.create(name: 'Melcom', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGv4xkuVEornxwKLRdZGkC2XeGGOM2hDRlBqTl6B0jA&s', user_id: @user)
+      @group = Group.create(name: 'Melcom',
+                            icon: 'https://encrypted-tbn0.gstatic.com/images', user_id: @user)
       @entity = Entity.create(author_id: @user, name: 'iphone', amount: 4500, group_id: @group)
     end
 

@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to groups_path, notice: 'Category created successfully.' }
+        format.html { redirect_to groups_path, notice: 'Category created successfully' }
       else
         format.html { render action: 'new' }
       end
