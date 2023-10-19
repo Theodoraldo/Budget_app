@@ -6,12 +6,12 @@
   <%= form_with scope: :group, url: groups_path do |form| %>
     <div class="mb-3">
       <%= form.label :name %>
-      <%= form.text_field :name, class: "input" %>
+      <%= form.text_field :name, class: "input", required: true %>
     </div>
 
      <div class="mb-3">
       <%= form.label :icon, "Icon url" %>
-      <%= form.text_field :icon , class: "input" %>
+      <%= form.text_field :icon , class: "input", required: true %>
     </div>
     <div class="actions">
       <%= form.submit "Save Category", class: "button is-success has-text-weight-bold pb-5 pt-3", id: "fix-btn" %>
