@@ -117,7 +117,7 @@ $ git clone https://github.com/Theodoraldo/Budget_app.git
 - Then switch to the project folder by the bellow query:
 
 ```
-$ cd Recipe_app
+$ cd Budget_app
 ```
 
 - Install the required dependecies with `bundle install`
@@ -149,7 +149,7 @@ $ cd Recipe_app
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Build the project schemas**
+- [ ] **Use file upload for saving image instaed of url**
 - [ ] **Add more functionality like Javascript to make app interactive**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
