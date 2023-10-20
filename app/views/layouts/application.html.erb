@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+      <header><%= render partial: 'layouts/header' %></header>
+      <div class="is-flex is-justify-content-center">
+        <span class="subtitle has-text-success-dark"><%= notice %></span>
+        <span class="subtitle has-text-danger-dark"><%= alert %></span>
+      </div>
+    <%= yield %>
+    <%= javascript_include_tag 'menu' %>
+  </body>
+</html>

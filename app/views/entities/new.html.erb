@@ -1,0 +1,24 @@
+<h1 class="is-size-4 mb-3 has-text-grey is-flex is-justify-content-center has-text-weight-bold">Add Transaction</h1>
+
+<div class="container" style="width: 90%;">
+  <%= link_to "<", groups_path, class: "button has-background-link has-text-white p-3 is-rounded mb-3" %>
+
+  <%= form_with scope: :entity, url: entities_path do |form| %>
+    <div class="mb-3">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "input", required: true %>
+    </div>
+
+     <div class="mb-3">
+      <%= form.label :amount %>
+      <%= form.number_field :amount , class: "input", required: true %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :group_id, "Category" %>
+      <%= form.collection_select :group_id, @groups, :id, :name, { prompt: " " }, class: "input", required: true %>
+    </div>
+
+    <%= form.submit "Save Transaction", class: "button is-success has-text-weight-bold pb-5 pt-3", id: "fix-btn" %>
+  <% end %>
+</div>
