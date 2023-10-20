@@ -176,7 +176,7 @@ Feel free to check the [issues page](https://github.com/Theodoraldo/Budget_app/i
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 - I would like to acknowledge [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) the [author of the original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=), as required by the [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) for such an awesome design and documentation.
-- Thanks to Microverse and anyone who contributed to the success of this project. If we am to mention names, this readme cannot hold the list 😁😁.
+- Thanks to Microverse and anyone who contributed to the success of this project. If I'm to mention names, this readme cannot hold the list 😁😁.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
